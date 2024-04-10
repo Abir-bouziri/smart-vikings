@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultat</title>
+    <link rel="icon" type="image/png" href="img/LOGO-MAKER-PRINCIPAL.png">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header>
+        <h1>ISTIC ROBOTS 1.0</h1>
+    </header>
+    <main class="robot-details">
+        
+        <form action="#" method="post">
+            <h2 class="first">Robot's details :</h2>
+        <p class="second"><strong>Robot's name :</strong> <% data.forEach(row => { %>
+            <%= row.robotname %> <!-- Replace "columnName" with the actual column name in your database table -->
+          <% }); %></p>
+        <p class="second"></p>
+        <p class="third"><strong>University :</strong><% data.forEach(row => { %>
+            <%= row.etablisement %> <!-- Replace "columnName" with the actual column name in your database table -->
+          <% }); %> </p>
+        <p class="third"></p>
+        <p class="fourth"><strong>Time :</strong><% data.forEach(row => { %>
+            <%= row.end %> <!-- Replace "columnName" with the actual column name in your database table -->
+          <% }); %></p>
+        <p class="fifth"><strong>Score :</strong><% data.forEach(row => { %>
+            <%= row.Score %> <!-- Replace "columnName" with the actual column name in your database table -->
+          <% }); %></p>
+        <p class="sixth" ><strong>Statut:</strong> </p>
+        <% data.forEach(row => { %>
+            <% if (row.disqualification == 1 ) { %>
+                <span id="res" >Disqualified</span>
+            <% } else { %>
+                <span id="res1" onclick=" redirectTosOtherPage()">Approved</span>
+            <% } %>
+        <% }); %>
+        
+        </form>
+        
+    </main>
+    
+    <footer>
+        <img class="logo" src="img/Union11.png">
+        <video autoplay muted loop id="myVideo">
+            <source src="img/SnapSave_App_1173416026985778_2160p.mp4" type="video/mp4">
+        </video>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

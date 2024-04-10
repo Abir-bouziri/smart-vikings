@@ -1,0 +1,67 @@
+body {
+  background-image: url('./di.png');
+  background-size: cover; /* Ajuster la taille de l'image pour remplir l'élément */
+ /* background-position: center; /* Centrer l'image horizontalement et verticalement */
+ background-repeat:no-repeat ;
+ background-size: 200% 200%;
+  background-position: cover;
+}
+
+th{
+  color: #7d1e1c;
+}
+.img1 {
+  display: flex;
+  align-items: center;
+  margin-left: 125px;
+}
+@keyframes zoomIn {
+  from {
+      transform: scale(0);
+  }
+  to {
+      transform: scale(1);
+  }
+}
+
+.zoom-in {
+  animation: zoomIn 0.5s ease-in-out;
+}
+/*.text {
+   /* Adjust the spacing between the image and text */
+
+.container {
+    margin-top: 20px;
+    color: #fdfdfd;
+    text-decoration-color: white;
+    border-radius: 30px; /* Arrondir les coins */
+
+  }
+  .transparent-background {
+    background-color: rgba(33, 33, 33, 0.5); /* Fond transparent avec opacité à 50% */
+    padding: 20px; /* Ajouter un peu de marge intérieure */
+    border-radius: 30px; /* Arrondir les coins */
+
+  }
+  
+
+  
+ 
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+  
+  
+
+  

@@ -1,0 +1,577 @@
+@font-face {
+    font-family: 'league';
+    src: url('../lib/font/League.otf') format('woff2'), /* Modern Browsers */
+         url('../lib/font/League.otf') format('woff'); /* Older Browsers */
+}
+
+body{
+    font-family: 'league', sans-serif;
+    font-weight:bold;
+    font-size: x-large;
+    background-image:url("../img/challenge.png") ;
+    background-repeat:initial ;
+   background-size: 150% 200%;
+    background-position: center;
+    /*overflow-x: hidden;*/
+ 
+
+}
+.navbar {
+    background-color: rgba(255, 255, 255, 0.3);
+    
+    
+}
+.navbar>.container-fluid {
+
+    justify-content: space-around;
+}
+.container-fluid{
+    justify-content: center;
+
+
+}
+.navbar-text {
+
+    padding-bottom: .1rem;
+}
+#word-container {
+    font-family: 'Arial', sans-serif;
+    background-color: transparent;
+    width: 100%;
+    /*height:100%;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    position: absolute;
+    z-index: -1;
+}
+  
+#viking-word {
+    font-size: 14rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 1px;
+    color: rgb(222, 21, 45); 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+#flashscore{
+    position: absolute;
+    top:calc(120%/2);
+    left:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1; 
+    transition: opacity 20s ease-in-out;
+    transform: translate(-50%, -50%); 
+    font-size: 4.5rem;
+    width: 100%;
+    letter-spacing: 1px;
+    color: rgb(200, 155, 60);
+    
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: -1;
+
+}
+.navbar-text{
+    font-size: larger;
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    width:auto;
+    height:auto;
+    
+
+}
+.table-container{
+    margin-top:11px;
+    width:70%;
+    /*height:40px;*/
+
+}
+.table {
+    background: linear-gradient(to right, rgba(116, 160, 240, 0.5), rgba(57, 137, 203, 0.2));
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1); 
+    --bs-table-bg: none;
+    font-weight: 500;
+}
+.table td{
+    border-right: 2px solid white;
+    width:calc(100%/3);
+}
+.table tr td :not(:nth-child(3)){
+    border-right:none;
+}
+.table tr td img{
+    width:11%;
+    height:11%;
+}
+
+
+    .maquette-container {
+        width: 80%;
+        height: 80%;
+        margin: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    svg{
+        height:70%;
+        width:70%;
+        background-color: rgba(255,255, 255);
+        border-radius: 25px;
+        filter:drop-shadow(black 0rem 0rem 20px ); 
+        
+    }
+    #sensor1{display:none;
+
+    }
+    #sensor2{display:none;
+
+    }
+    #sensor3{display:none;
+
+    }
+    #sensor4{display:none;
+
+    }
+    #sensor5{display:none;
+
+    }
+    #sensor6{display:none;
+
+    }
+    #sensor7{display:none;
+
+    }
+    #sensor8{display:none;
+
+    }
+    #sensor9{display:none;
+
+    }
+    @keyframes flash {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+      
+      .scale-and-flash {
+        animation: flash 1.5s infinite; 
+      }
+    
+
+/*
+.maquette-container .standard{
+    width:68.7%;
+    right:231px;
+    top:215px;
+    height:75%;
+    position: absolute;
+    display:flex;
+    flex-wrap: wrap;
+    
+
+}
+.maquette-container .standard img{
+    width:100%;
+    height:100%;
+}
+.maquette-container .winner{
+    width:68.7%;
+    right:231px;
+    top:215px;
+    height:75%;
+    position: absolute;
+    display:flex;
+    flex-wrap: wrap;
+    
+
+
+}
+.maquette-container .winner img{
+    width:100%;
+    height:100%;
+}
+/********************************Maquette---------Winner*******************************************
+#winner-1{
+    position: absolute;
+    height:62%;
+    width:17.5%;
+    background-image: url("img/maquette-win.png");
+    background-repeat: no-repeat;
+    background-size: 576% 161%;
+    background-position-y:5% ;
+    
+}
+#winner-2{
+    position: absolute;
+    left:17.5%;
+    height:62%;
+    width:21%;
+    background-image: url("img/maquette-win.png");
+    background-repeat: no-repeat;
+    background-size: 471% 161%;
+    background-position:21% 5% ;
+}
+#winner-3{
+    position: absolute;
+    left: 38.5%;
+    height: 62%;
+    width: 27%;
+    background-image: url("img/maquette-win.png");
+    background-repeat: no-repeat;
+    background-size: 370% 161%;
+    background-position: 53% 5%;
+}
+#winner-4{
+    position: absolute;
+    left: 65.5%;
+    height: 49.5%;
+    width: 34%;
+    background-image: url("img/maquette-win.png");
+    background-repeat: no-repeat;
+    background-size: 314% 189%;
+    background-position: 98% 0%;
+}
+#winner-5{
+    position: absolute;
+    top: 62%;
+    height: 85%;
+    width: 10%;
+    background-image: url("img/maquette-win.png");
+    background-repeat: no-repeat;
+    background-size: 990% 123%;
+    background-position: 0% 341%;
+
+}#winner-6{
+    position: absolute;
+    top: 62%;
+    left: 10%;
+    height: 49%;
+    width: 20%;
+    background-image: url("img/maquette-win.png");
+    background-repeat: no-repeat;
+    background-size: 576% 213%;
+    background-position: 13% 120%;
+
+}
+#winner-7{
+    position: absolute;
+    top: 62%;
+    left: 30%;
+    height: 62.7%;
+    width: 36%;
+    background-image: url("img/maquette-win.png");
+    background-repeat: no-repeat;
+    background-size: 294% 167.6%;
+    background-position: 49% 158%;
+
+}
+#winner-8{
+    position: absolute;
+    top: 49%;
+    left: 65%;
+    height: 80.8%;
+    width: 16.9%;
+    background-image: url("img/maquette-win.png");
+    background-repeat: no-repeat;
+    background-size: 501% 131%;
+    background-position: 84% 219%;
+
+}
+#winner-9{
+    position: absolute;
+    /*top: 342px;
+    bottom:1px;
+    left: 81.7%;
+    height: 50.7%;
+    width: 17.8%;
+    margin-top: -6.7%;
+    background-image: url("img/maquette-win.png");
+    background-repeat: no-repeat;
+    background-size: 568% 222%;
+    background-position: 99.4% 98%;
+
+}
+
+
+#challenge-1{
+    position: absolute;
+    height:62%;
+    width:17.5%;
+    background-image: url("img/maquette.PNG");
+    background-repeat: no-repeat;
+    background-size: 576% 161%;
+    background-position-y:5% ;
+    
+    
+}
+
+
+#challenge-2{
+    position: absolute;
+    left:17.5%;
+    height:62%;
+    width:21%;
+    background-image: url("img/maquette.png");
+    background-repeat: no-repeat;
+    background-size: 471% 161%;
+    background-position:21% 5% ;
+
+
+}
+
+#challenge-3{
+    position: absolute;
+    left: 38.5%;
+    height: 62%;
+    width: 27%;
+    background-image: url("img/maquette.png");
+    background-repeat: no-repeat;
+    background-size: 370% 161%;
+    background-position: 53% 5%;
+}
+#challenge-4{
+    position: absolute;
+    left: 65.5%;
+    height: 49.5%;
+    width: 34%;
+    background-image: url("img/maquette.png");
+    background-repeat: no-repeat;
+    background-size: 314% 189%;
+    background-position: 98% 0%;
+}
+#challenge-5{
+    position: absolute;
+    top: 62%;
+    height: 85%;
+    width: 10%;
+    background-image: url("img/maquette.png");
+    background-repeat: no-repeat;
+    background-size: 990% 123%;
+    background-position: 0% 341%;
+}
+#challenge-6{
+    position: absolute;
+    top: 62%;
+    left: 10%;
+    height: 49%;
+    width: 20%;
+    background-image: url("img/maquette.png");
+    background-repeat: no-repeat;
+    background-size: 576% 213%;
+    background-position: 13% 120%;
+}
+#challenge-7{
+    position: absolute;
+    top: 62%;
+    left: 30%;
+    height: 62.7%;
+    width: 36%;
+    background-image: url("img/maquette.png");
+    background-repeat: no-repeat;
+    background-size: 294% 167.6%;
+    background-position: 49% 158%;
+}
+#challenge-8{
+    position: absolute;
+    top: 49%;
+    left: 65%;
+    height: 80.8%;
+    width: 16.9%;
+    background-image: url("img/maquette.png");
+    background-repeat: no-repeat;
+    background-size: 501% 131%;
+    background-position: 84% 219%;
+}
+#challenge-9{
+    position: absolute;
+    top: 342px;
+    bottom:1px;
+
+    left: 81.7%;
+    height: 50.7%;
+    width: 17.8%;
+    margin-top: -6.7%;
+    background-image: url("img/maquette.png");
+    background-repeat: no-repeat;
+    background-size: 568% 222%;
+    background-position: 99.4% 98%;
+}
+
+
+*/
+/*
+#challenge-1{
+    height:62%;
+    width:17.5%;
+    /*backdrop-filter: blur(0px);
+    opacity:0.5;
+    
+
+}
+#challenge-2{
+    height:62%;
+    width:21%;
+    backdrop-filter: blur(2px);
+
+
+
+}
+#challenge-3{
+    height:62%;
+    width:27%;
+    backdrop-filter: blur(2px);
+
+
+}
+#challenge-4{
+    height:49.5%;
+    width:34%;
+    backdrop-filter: blur(2px);
+
+
+}
+#challenge-5{
+    height:38%;
+    width:10%;
+    backdrop-filter: blur(2px);
+
+}
+#challenge-6{
+    height:38%;
+    width:20%;
+    backdrop-filter: blur(2px);
+
+}
+#challenge-7{
+    height:38%;
+    width:36%;
+    backdrop-filter: blur(2px);
+
+}
+#challenge-8{
+    height: 38%;
+    width:14.4%;
+    backdrop-filter: blur(2px);
+
+
+}
+#challenge-9{
+
+    height:50.9%;
+    width:19.6%;
+    margin-top: -6.7%;
+    backdrop-filter: blur(2px);
+}*/
+
+.buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top:40px;
+    width:100%;
+    height:calc(100%/2);
+    color:white;
+}
+.buttons-container div{
+    font-weight:800;
+    padding:20px;
+    letter-spacing: 0.5px;
+    align-items: center;
+    width:calc(100%/4);
+    height:calc(100%/4);
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+
+}
+.btn-success{
+    background-color: rgb(50, 50, 134,0.8);
+    border-color: rgb(50, 50, 134,0.8);
+
+}
+.btn-success:hover{
+    background-color: rgb(50, 50, 134,1);
+    border-color: rgb(50, 50, 134,1);
+
+
+}
+.timer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    gap:5px;
+    color:white;
+    width:calc(100%);
+    height:calc(100%/2);
+
+}
+.btn-info{
+    width:10%;
+}
+.buttons-container img{
+    width:20%;
+    max-height:100px;
+
+}
+/*
+.maquette-container img{
+    max-width: 250px;
+    max-height: 250px;
+}
+#challenge-1{
+    position: absolute;
+    right: 75rem;
+    top: 15rem;
+}
+#challenge-2{
+    position: absolute;
+    right: 63rem;
+    top: 13rem;
+}
+#challenge-3{
+    position: absolute;
+    right: 47.5rem;
+    top: 13.4rem;
+}
+#challenge-4{
+    position: absolute;
+    right: 32rem;
+    top: 14rem;
+}
+#challenge-5{
+    position: absolute;
+    top: 30rem;
+    right: 77rem;
+}
+#challenge-6{
+    position: relative;
+    top: 25.75rem;
+    right: 56rem;
+}
+#challenge-7{
+    position: relative;
+    top: 14.5rem;
+    right: 42rem;
+}
+#challenge-8{
+    position: relative;
+    top: 2.5rem;
+    right: 25rem;
+}
+#challenge-9{
+    position: relative;
+    top: 2.5rem;
+    right: 25rem;
+}*/

@@ -1,0 +1,121 @@
+body{
+  /*background-image:url(https://dnm.nflximg.net/api/v6/BvVbc2Wxr2w6QuoANoSpJKEIWjQ/AAAAQSS02tD1KV3IexnX5ru97ssUtYKI4_d2XU3rKetk2KIgSpZPdjnm4_22an7jRDBwPusVuUOnswvE2BdRuOSp9aykWev-qw57jGd5JEE2EIiF1WzClQNeJjE8aGraG6QWL-aNw02KuAssWQtTtpkSNP8jx1I.jpg?r=ca3);
+  */
+  background-image: url("./winner.png");
+  background-repeat: no-repeat;
+  /*background-size:cover; */
+  background-repeat:initial ;
+  background-size: 150% 200%;
+   background-position: center;
+}
+ 
+.container {
+    margin-top: 20px;
+  }
+  
+  #liste-joueurs {
+   display: flex;
+  flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex: content;
+    flex-wrap: wrap;
+
+  }
+#l {
+  text-align: center;
+}
+  
+  .joueur {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color:whitesmoke;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+    
+  }
+  
+  .joueur.haut {
+    background-color: 	#FFD700;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    /*animation: haut 1s /*ease infinite*/;
+    /*animation: haut 1s ease forwards , sec 1s ease forwards ;*/
+    animation: haut 1s ease forwards;
+    
+  }
+  @keyframes haut  {
+    0% {
+      transform: scale(1, 1);
+    }
+    50% {
+      transform: scale(1.75, 1.75);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+
+  @keyframes sec  {
+    0% {
+      transform: scale(1, 1);
+    }
+    50% {
+      transform: scale(1.5, 1.5);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+
+  @keyframes third  {
+    0% {
+      transform: scale(1, 1);
+    }
+    50% {
+      transform: scale(1.25, 1.25);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+
+  .haut-image{
+    width:50px;
+    height:50px;
+  }
+
+  .joueur.sec {
+    background-color: #C0C0C0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    animation: sec 1s ease forwards;
+    animation-delay: 1s;
+  
+  }
+
+
+  .joueur.third {
+    background-color:	#CD7F32;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    animation: third 1s ease forwards;
+    animation-delay:2s;
+    
+  }
+
+
+  .joueur .nom {
+    font-weight: bold;
+  }
+  
+  .joueur .time {
+    font-size: 18px;
+  } 
+  .joueur .points {
+    font-size: 18px;
+  }
+  

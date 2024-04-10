@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Form Example</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./test.css" rel="stylesheet">
+</head>
+<body>
+<div id="botton">
+    <button  onclick="Ajout()" type="button" class="btn btn-primary" >Ajout un robot</button>
+    <button type="button" class="btn btn-secondary" onclick="update()">Update un robot</button>
+</div>
+
+    <div id="container1">
+        <h2>Ajouter un robot</h2>
+        <form  method="post" action="/ajout">
+                        <div class="form-group">
+                <label for="email">Robot's name:</label>
+                <input type="text" class="" id="email" placeholder="Enter the Robot's name" name="robname">
+            </div>
+            <div class="form-group">
+                <label for="message">Robot's username:</label>
+                <input class="text" id="message" rows="4" placeholder="Robot's username" name="robuser"></input>
+            </div>
+            <div class="form-group">
+                <label for="message">University:</label>
+                <input class="text" id="message" rows="4" placeholder="Enter the university" name="robuniversity"></input>
+            </div>
+            <div class="form-group">
+                <label for="message">Homologation's points:</label>
+                <input class="int" id="message" rows="4" placeholder="Enter the homologation's points" name="homologation"></input>
+            </div>
+            <button type="submit" class="btn btn-primary">Ajouter</button>
+        </form>
+    </div> 
+
+    <div id="container2">
+        <h2>Update un robot</h2>
+        <form action="/update" method="post"  >
+            <div class="form-group">
+                <label for="name">id:</label>
+                <input type="text" class="" id="name" placeholder="Enter your name" name="id">
+            </div>
+            <div class="form-group">
+                <label for="email">score final:</label>
+                <input type="int" class="" id="email" placeholder="Enter your email"  name="score">
+            </div>
+            <div class="form-group">
+              <label for="email">Number of challenge:</label>
+              <input type="int" class="" id="email" placeholder="Enter your email"  name="y">
+          </div>
+            <div class="form-group"  id="ch">
+                <label for="message">challenge 1:</label>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="ch1" id="exampleRadios1" value="1" checked>
+                    <label class="form-check-label" for="exampleRadios1">
+                      Validé
+                    </label></div>
+                    <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="ch1" id="exampleRadios2" value="0">
+                    <label class="form-check-label" for="exampleRadios2">
+                      non Validé
+                    </label>
+            
+                  </div></div>
+                
+                      <div class="form-group"  id="ch">
+                        <label for="message">challenge 2:</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="ch2" id="exampleRadios1" value="1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                              Validé
+                            </label></div>
+                            <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="ch2" id="exampleRadios2" value="0">
+                            <label class="form-check-label" for="exampleRadios2">
+                              non Validé
+                            </label>
+                    
+                          </div></div>
+                          <div class="form-group"  id="ch">
+                            <label for="message">challenge 3:</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="ch3" id="exampleRadios1" value="1" checked>
+                                <label class="form-check-label" for="exampleRadios1">
+                                  Validé
+                                </label></div>
+                                <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="ch3" id="exampleRadios2" value="0">
+                                <label class="form-check-label" for="exampleRadios2">
+                                  non Validé
+                                </label>
+                        
+                              </div></div>  
+                              <div class="form-group"  id="ch">
+                                <label for="message">challenge 4:</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="ch4" id="exampleRadios1" value="1" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                      Validé
+                                    </label></div>
+                                    <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="ch4" id="exampleRadios2" value="0">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                      non Validé
+                                    </label>
+                            
+                                  </div></div>
+                                  <div class="form-group"  id="ch">
+                                    <label for="message">challenge 5:</label>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="ch5" id="exampleRadios1" value="1" checked>
+                                        <label class="form-check-label" for="exampleRadios1">
+                                          Validé
+                                        </label></div>
+                                        <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="ch5" id="exampleRadios2" value="0">
+                                        <label class="form-check-label" for="exampleRadios2">
+                                          non Validé
+                                        </label>
+                                
+                                      </div></div>
+                                      <div class="form-group"  id="ch">
+                                        <label for="message">challenge 6:</label>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="ch6" id="exampleRadios1" value="1" checked>
+                                            <label class="form-check-label" for="exampleRadios1">
+                                              Validé
+                                            </label></div>
+                                            <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="ch6" id="exampleRadios2" value="0">
+                                            <label class="form-check-label" for="exampleRadios2">
+                                              non Validé
+                                            </label>
+                                    
+                                          </div></div>
+                                          <div class="form-group"  id="ch">
+                                            <label for="message">challenge 7:</label>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="ch7" id="exampleRadios1" value="1" checked>
+                                                <label class="form-check-label" for="exampleRadios1">
+                                                  Validé
+                                                </label></div>
+                                                <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="ch7" id="exampleRadios2" value="0">
+                                                <label class="form-check-label" for="exampleRadios2">
+                                                  non Validé
+                                                </label>
+                                        
+                                              </div></div>
+                                              <div class="form-group"  id="ch">
+                                                <label for="message">challenge 8:</label>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="ch8" id="exampleRadios1" value="1" checked>
+                                                    <label class="form-check-label" for="exampleRadios1">
+                                                      Validé
+                                                    </label></div>
+                                                    <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="ch8" id="exampleRadios2" value="0">
+                                                    <label class="form-check-label" for="exampleRadios2">
+                                                      non Validé
+                                                    </label>
+                                            
+                                                  </div></div>  
+                                                  <div class="form-group"  id="ch">
+                                                    <label for="message">challenge 9:</label>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="ch9" id="exampleRadios1" value="1" checked>
+                                                        <label class="form-check-label" for="exampleRadios1">
+                                                          Validé
+                                                        </label></div>
+                                                        <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="ch9" id="exampleRadios2" value="0">
+                                                        <label class="form-check-label" for="exampleRadios2">
+                                                          non Validé
+                                                        </label>
+                                                
+                                                      </div></div>
+
+                                                      <div class="form-group"  id="ch">
+                                                        <label for="message">challenge 10:</label>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="ch10" id="exampleRadios1" value="1" checked>
+                                                            <label class="form-check-label" for="exampleRadios1">
+                                                              Validé
+                                                            </label></div>
+                                                            <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="ch10" id="exampleRadios2" value="0">
+                                                            <label class="form-check-label" for="exampleRadios2">
+                                                              non Validé
+                                                            </label>
+                                                    
+                                                          </div></div>
+                                                          <div class="form-group"  id="ch">
+                                                            <label for="message">Disqualification:</label>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio" name="diss" id="exampleRadios1" value="1" checked>
+                                                                <label class="form-check-label" for="exampleRadios1">
+                                                                  disqualifié
+                                                                </label></div>
+                                                                <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio" name="diss" id="exampleRadios2" value="0">
+                                                                <label class="form-check-label" for="exampleRadios2">
+                                                                  non disqualifié
+                                                                </label>
+                                                        
+                                                              </div></div>      
+                                      <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS (optional, for some features like dropdowns, etc.) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./test.js"></script>
+    
+</body>
+</html>
